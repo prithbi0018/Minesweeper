@@ -133,6 +133,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EventService.cpp" />
+    <ClCompile Include="GameplayUIController.cpp" />
     <ClCompile Include="GameService.cpp" />
     <ClCompile Include="GraphicService.cpp" />
     <ClCompile Include="main.cpp" />
@@ -143,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EventService.h" />
+    <ClInclude Include="GameplayUIController.h" />
     <ClInclude Include="GameService.h" />
     <ClInclude Include="GraphicService.h" />
     <ClInclude Include="MainMenuUIController.h" />
