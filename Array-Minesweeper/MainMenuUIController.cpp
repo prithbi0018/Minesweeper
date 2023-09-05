@@ -68,9 +68,9 @@ void MainMenuUIController::positionButtons()
 {
     float x_position = (static_cast<float>(game_window->getSize().x) / 2) - button_width / 2;
 
-    play_button_sprite.setPosition({ x_position, 300.f });
-    instructions_button_sprite.setPosition({ x_position, 500.f });
-    quit_button_sprite.setPosition({ x_position, 700.f });
+    play_button_sprite.setPosition({ x_position, 500.f });
+    instructions_button_sprite.setPosition({ x_position, 700.f});
+    quit_button_sprite.setPosition({ x_position, 900.f });
 }
 
 void MainMenuUIController::show()
