@@ -132,7 +132,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EventService.cpp" />
+    <ClCompile Include="GameService.cpp" />
+    <ClCompile Include="GraphicService.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenuUIController.cpp" />
+    <ClCompile Include="ServiceLocator.cpp" />
+    <ClCompile Include="SplashScreenUIController.cpp" />
+    <ClCompile Include="UIService.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EventService.h" />
+    <ClInclude Include="GameService.h" />
+    <ClInclude Include="GraphicService.h" />
+    <ClInclude Include="MainMenuUIController.h" />
+    <ClInclude Include="ServiceLocator.h" />
+    <ClInclude Include="SplashScreenUIController.h" />
+    <ClInclude Include="UIService.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
