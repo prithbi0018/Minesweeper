@@ -36,8 +36,8 @@ void ServiceLocator::setGameWindow()
 
 void ServiceLocator::updateServices()
 {
-	graphic_service->updateGraphics();
 	ui_service->updateUI();
+	graphic_service->updateGraphics();
 }
 
 EventService* ServiceLocator::getEventService() { return event_service; }

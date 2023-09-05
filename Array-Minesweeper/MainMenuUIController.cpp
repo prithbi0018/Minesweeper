@@ -98,7 +98,7 @@ void MainMenuUIController::handleButtonInteractions()
     sf::Vector2f mouse_position = sf::Vector2f(sf::Mouse::getPosition(*game_window));
 
     if (clickedButton(&play_button_sprite, mouse_position))
-        printf("Clicked Play Button \n");
+        ServiceLocator::getInstance()->getUIService()->setUIState(UIState::GAMEPLAY);
 
     if (clickedButton(&instructions_button_sprite, mouse_position))
         printf("Clicked Instruction Button \n");
