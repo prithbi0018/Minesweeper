@@ -28,6 +28,7 @@ void ServiceLocator::initialize()
 {
 	graphic_service->initialize();
 	sound_service->initialize();
+	event_service->initialize();
 
 	game_window = graphic_service->getGameWindow();
 	ui_service->initialize();

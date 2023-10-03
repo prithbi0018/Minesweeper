@@ -5,7 +5,10 @@ EventService::EventService() { game_window = nullptr; }
 
 EventService::~EventService() = default;
 
-void EventService::setGameWindow(sf::RenderWindow* window_to_set) { game_window = window_to_set; }
+void EventService::initialize()
+{
+	game_window = ServiceLocator::getInstance()->getGameWindow();
+}
 
 void EventService::processEvents()
 {

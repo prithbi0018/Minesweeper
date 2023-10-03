@@ -18,6 +18,6 @@ public:
 	EventService();
 	~EventService();
 
-	void setGameWindow(sf::RenderWindow* window_to_set);
+	void initialize();
 	void processEvents();
 };
