@@ -12,7 +12,8 @@ ServiceLocator::ServiceLocator()
 	ui_service = nullptr;
 	game_window = nullptr;
 
-	createServices(); }
+	createServices(); 
+}
 
 ServiceLocator::~ServiceLocator() { clearAllServices(); }
 
@@ -36,8 +37,8 @@ void ServiceLocator::initialize()
 
 void ServiceLocator::update()
 {
-	graphic_service->update();
 	ui_service->update();
+	graphic_service->update();
 }
 
 void ServiceLocator::render()
@@ -60,19 +61,13 @@ ServiceLocator* ServiceLocator::getInstance()
 	return &instance;
 }
 
-sf::RenderWindow* ServiceLocator::getGameWindow()
-{
-	return game_window;
-}
+sf::RenderWindow* ServiceLocator::getGameWindow() { return game_window; }
 
 EventService* ServiceLocator::getEventService() { return event_service; }
 
 GraphicService* ServiceLocator::getGraphicService() { return graphic_service; }
 
-SoundService* ServiceLocator::getSoundService()
-{
-	return sound_service;
-}
+SoundService* ServiceLocator::getSoundService() { return sound_service; }
 
 UIService* ServiceLocator::getUIService() { return ui_service; }
 
