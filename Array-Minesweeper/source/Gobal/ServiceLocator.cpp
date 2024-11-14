@@ -91,4 +91,5 @@ namespace Global
 	BoardService* ServiceLocator::getBoardService() { return board_service; }
 
 	void ServiceLocator::deleteServiceLocator() { delete(this); }
+
 }

@@ -35,5 +35,6 @@ namespace Global
         UI::UIService* getUIService();
         Gameplay::Board::BoardService* getBoardService();
         void deleteServiceLocator();
+
     };
 }

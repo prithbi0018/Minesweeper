@@ -49,5 +49,6 @@ namespace Gameplay
 		{
 			delete(board_view);
 		}
+
 	}
 }
