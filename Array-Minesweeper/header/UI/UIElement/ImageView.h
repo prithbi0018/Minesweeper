@@ -26,6 +26,8 @@ namespace UI
 			virtual void setOriginAtCentre();
 			virtual void setImageAlpha(float alpha);
 			virtual void setCentreAlinged();
+			virtual void setTextureRect(sf::IntRect texture_rect);
 		};
+
 	}
 }
