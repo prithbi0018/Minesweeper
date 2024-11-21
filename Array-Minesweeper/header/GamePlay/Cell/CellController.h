@@ -16,10 +16,11 @@ namespace Gameplay
 			CellView* cell_view;
 			CellModel* cell_model;
 			void destroy();
-
+			int  cell_index;
 		public:
 			CellController();
 			~CellController();
+			CellController(int cell_index);
 
 			void initialize(float cell_width, float cell_height);
 			void update();
@@ -28,6 +29,7 @@ namespace Gameplay
 
 			CellState getCellState();
 			CellValue getCellValue();
+			int getCellIndex();
 		};
 	}
 }
