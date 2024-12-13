@@ -1,39 +1,40 @@
-#pragma once
-#include <sfml/Graphics.hpp>
-#include "../../header/Gameplay/Cell/CellController.h"
+    #pragma once
+    #include <sfml/Graphics.hpp>
+    #include "../../header/Gameplay/Cell/CellController.h"
 
-namespace Gameplay
-{
-    namespace Board
+    namespace Gameplay
     {
-        class BoardView;
-
-        class BoardController
+        namespace Board
         {
-        public:
-            static const int number_of_rows = 9;
-            static const int number_of_colums = 9;
-            static const int mines_count = 8;
+            class BoardView;
 
-            Cell::CellController* cells[number_of_colums];
+            class BoardController
+            {
+            public:
+                static const int number_of_rows = 9;
+                static const int number_of_columns = 9;
+                static const int mines_count = 8;
 
-            BoardController();
-            ~BoardController();
 
-            void initialize();
-            void update();
-            void render();
-            void reset();
+                Cell::CellController* board_cells[number_of_rows][number_of_columns];
 
-        private:
-            BoardView* board_view;
-            Cell::CellController* cell;
+                BoardController();
+                ~BoardController();
 
-            void createBoard();
-            void initializeCells();
-            void destroy();
-            void deleteCells();
-            void deleteBoard();
-        };
+                void initialize();
+                void update();
+                void render();
+                void reset();
+
+            private:
+                BoardView* board_view;
+                Cell::CellController* cell;
+
+                void createBoard();
+                void initializeCells();
+                void destroy();
+                void deleteCells();
+                void deleteBoard();
+            };
+        }
     }
-}
