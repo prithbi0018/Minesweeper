@@ -38,6 +38,8 @@ namespace Gameplay
         public:
             CellModel(sf::Vector2i position);
             ~CellModel();
+            CellModel(int index);
+
 
             CellState getCellState();
             void setCellState(CellState state);

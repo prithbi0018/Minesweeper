@@ -31,6 +31,12 @@ namespace Gameplay
 		{
 			cell_value = value;
 		}
+		CellModel::CellModel(int index)
+		{
+			reset();
+			
+			
+		}
 
 		void CellModel::reset()
 		{
