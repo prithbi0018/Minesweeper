@@ -12,10 +12,11 @@ namespace Gameplay
 	public:
 		GameplayService();
 		~GameplayService();
-
+		 
 		void initialize();
 		void update();
 		void render();
 		void startGame();
+		float getRemainingTime();
 	};
 }
