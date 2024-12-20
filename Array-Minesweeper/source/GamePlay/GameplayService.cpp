@@ -11,7 +11,7 @@ namespace Gameplay
 	GameplayService::~GameplayService()
 	{
 		destroy();
-	}
+	} 
 
 	void GameplayService::initialize()
 	{

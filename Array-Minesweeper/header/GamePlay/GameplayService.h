@@ -12,7 +12,7 @@ namespace Gameplay
 	public:
 		GameplayService();
 		~GameplayService();
-
+		 
 		void initialize();
 		void update();
 		void render();

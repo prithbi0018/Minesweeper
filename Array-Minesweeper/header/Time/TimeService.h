@@ -13,7 +13,7 @@ namespace Time
 		void updateDeltaTime();
 		float calculateDeltaTime();
 		void updatePreviousTime();
-
+		 
 	public:
 		void initialize();
 		void update();

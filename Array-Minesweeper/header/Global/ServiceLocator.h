@@ -12,7 +12,7 @@ namespace Global
 {
     class ServiceLocator
     {
-    private:
+    private: 
         Event::EventService* event_service;
         Graphics::GraphicService* graphic_service;
         Sound::SoundService* sound_service;
