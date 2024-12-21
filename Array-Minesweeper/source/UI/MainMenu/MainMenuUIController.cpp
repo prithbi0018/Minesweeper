@@ -71,11 +71,11 @@ namespace UI
             instructions_button->registerCallbackFuntion(std::bind(&MainMenuUIController::instructionsButtonCallback, this));
             quit_button->registerCallbackFuntion(std::bind(&MainMenuUIController::quitButtonCallback, this));
         }
-
         void MainMenuUIController::playButtonCallback()
         {
-            // GameState will change to gameplay state.
             ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
+            GameService::setGameState(GameState::GAMEPLAY);
+            ServiceLocator::getInstance()->getGameplayService()->startGame();
         }
 
         void MainMenuUIController::instructionsButtonCallback()

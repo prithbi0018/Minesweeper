@@ -70,6 +70,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>C:\Users\prith\Desktop\SFML-2.6.1\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -133,6 +136,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\GamePlay\BoardController.cpp" />
+    <ClCompile Include="source\GamePlay\BoardService.cpp" />
+    <ClCompile Include="source\GamePlay\BoardView.cpp" />
+    <ClCompile Include="source\GamePlay\Cell\CellController.cpp" />
+    <ClCompile Include="source\GamePlay\Cell\CellModel.cpp" />
+    <ClCompile Include="source\GamePlay\Cell\CellView.cpp" />
+    <ClCompile Include="source\GamePlay\GameplayController.cpp" />
+    <ClCompile Include="source\GamePlay\GameplayService.cpp" />
     <ClCompile Include="source\UI\Instructions\InstructionsScreenUIController.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="source\Event\EventService.cpp" />
@@ -153,6 +164,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Event\EventService.h" />
+    <ClInclude Include="header\GamePlay\Board\BoardController.h" />
+    <ClInclude Include="header\GamePlay\Board\BoardService.h" />
+    <ClInclude Include="header\GamePlay\Board\BoardView.h" />
+    <ClInclude Include="header\GamePlay\Cell\CellController.h" />
+    <ClInclude Include="header\GamePlay\Cell\CellModel.h" />
+    <ClInclude Include="header\GamePlay\Cell\CellView.h" />
+    <ClInclude Include="header\GamePlay\GameplayController.h" />
+    <ClInclude Include="header\GamePlay\GameplayService.h" />
     <ClInclude Include="header\Main\GameService.h" />
     <ClInclude Include="header\Global\Config.h" />
     <ClInclude Include="header\Graphics\GraphicService.h" />
