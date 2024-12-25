@@ -1,5 +1,5 @@
 #pragma once
-#include <sfml/Graphics.hpp>
+#include <SFML/Graphics.hpp>
 
 namespace Gameplay
 {
@@ -33,8 +33,6 @@ namespace Gameplay
             CellValue cell_value;
             sf::Vector2i cell_position;
 
-
-
         public:
             CellModel(sf::Vector2i position);
             ~CellModel();
@@ -44,9 +42,16 @@ namespace Gameplay
 
             CellValue getCellValue();
             void setCellValue(CellValue value);
+
             sf::Vector2i getCellPosition();
             void setCellPosition(sf::Vector2i new_position);
+
             void reset();
+
+            // Helper methods for convenience
+            bool isHidden() const;
+            bool isOpen() const;
+            bool isFlagged() const;
         };
     }
 }

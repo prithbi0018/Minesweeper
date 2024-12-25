@@ -90,6 +90,9 @@
     <ClCompile Include="source\GamePlay\Cell\CellController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\UI\UIElement\ButtonType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Global\ServiceLocator.h">
@@ -165,6 +168,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="header\GamePlay\Cell\CellView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\UIElement\ButtonType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,35 +1,41 @@
-#pragma once
-#include<SFML/Graphics.hpp>
+	#pragma once
+	#include<SFML/Graphics.hpp>
 
-namespace Gameplay
-{
-	namespace Cell
+	namespace Gameplay
 	{
-		class CellView;
-		class CellModel;
-		enum class CellState;
-		enum class CellValue;
-
-		class CellController
+		namespace Cell
 		{
-		private:
-			CellView* cell_view;
-			CellModel* cell_model;
-			void destroy();
-			int  cell_index;
-		public:
-			CellController(sf::Vector2i position);
-			~CellController();
-			CellController(int cell_index);
+			class CellView;
+			class CellModel;
+			enum class CellState;
+			enum class CellValue;
 
-			void initialize(float cell_width, float cell_height);
-			void update();
-			void render();
-			void reset();
+			class CellController
+			{
+			private:
+				CellView* cell_view;
+				CellModel* cell_model;
+				void destroy();
+				int  cell_index;
+			public:
+				CellController(sf::Vector2i position);
+				~CellController();
+				CellController(int cell_index);
 
-			CellState getCellState();
-			CellValue getCellValue();
-			sf::Vector2i getCellPosition();
-		};
+				void initialize(float cell_width, float cell_height);
+				void update();
+				void render();
+				void reset();
+
+				CellState getCellState();
+				CellValue getCellValue();
+				sf::Vector2i getCellPosition();
+				bool canOpenCell();
+				void openCell();
+				void openFlag();
+				void flagCell();
+
+
+			};
+		}
 	}
-}

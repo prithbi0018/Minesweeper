@@ -1,34 +1,38 @@
 #pragma once
 #include "../../header/UI/UIElement/ButtonView.h"
+#include "../../header/Gameplay/Cell/CellController.h"
+#include "../../header/Global/Config.h"
+#include "../../header/Global/ServiceLocator.h"
+#include <SFML/Graphics.hpp> 
 
 namespace Gameplay
 {
-	namespace Cell
-	{
-		class CellController;
+    namespace Cell
+    {
+        class CellController;
 
-		class CellView
-		{
-		private:
-			UI::UIElement::ButtonView* cell_button;
-			CellController* cell_controller;
+        class CellView
+        {
+        private:
+            UI::UIElement::ButtonView* cell_button;
+            CellController* cell_controller;
 
-			int slice_count = 12;
-			const int tile_size = 32;
-			const float cell_top_offset = 274.f;
-			const float cell_left_offset = 583.f;
-			void initializeButtonImage(float width, float height);
-			void setCellTexture();
-			
-			sf::Vector2f getCellScreenPosition(float width, float height);
+            int slice_count = 12;
+            const int tile_size = 32;
+            const float cell_top_offset = 274.f;
+            const float cell_left_offset = 583.f;
 
-		public:
-			CellView(CellController* controller);
-			~CellView();
-			void initialize(float cell_width, float cell_height);
-			
-			void update();
-			void render();
-		};
-	}
+            void initializeButtonImage(float width, float height);
+            void setCellTexture();
+            sf::Vector2f getCellScreenPosition(float width, float height);
+            void registerButtonCallback();
+
+        public:
+            CellView(CellController* controller);
+            ~CellView();
+            void initialize(float cell_width, float cell_height);
+            void update();
+            void render();
+        };
+    }
 }

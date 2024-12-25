@@ -21,6 +21,8 @@ namespace Event
     {
         updateButtonsState(left_mouse_button_state, sf::Mouse::Left);
         updateButtonsState(right_mouse_button_state, sf::Mouse::Right);
+        updateButtonsState(left_mouse_button_state, sf::Mouse::Left);
+        updateButtonsState(right_mouse_button_state, sf::Mouse::Right); 
     }
 
     void EventService::processEvents()
